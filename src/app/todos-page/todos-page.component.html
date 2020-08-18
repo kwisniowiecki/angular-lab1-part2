@@ -1,0 +1,6 @@
+<app-filter-form></app-filter-form>
+<ol>
+  <app-todo *ngFor="let todo of todos; index as i" [todoRef]="todo" (deleted)="onDelete(i)"></app-todo>
+</ol>
+<app-add-form (added)="onAdd($event)">
+</app-add-form>
